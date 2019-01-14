@@ -1,6 +1,6 @@
 //Install express server
-const express = require('express');
-const path = require('path');
+const express = require('express'),
+      path = require('path');
 
 const app = express();
 
@@ -8,7 +8,7 @@ const app = express();
 // Replace the '/dist/<to_your_project_name>'
 app.use(express.static('./dist/ASII'));
 
-app.get('/*', function(req,res) {
+app.get('/*', (req,res) => {
   // Replace the '/dist/<to_your_project_name>/index.html'
   res.sendFile(path.join(__dirname, '/dist/ASII/index.html'));
 });

@@ -1,0 +1,95 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<section class="banner">
+  <img src="./assets/img/galeria.jpg" alt="" class="banner__img">
+  <div class="banner__content">Galería de Proyectos Ejecutados</div>
+</section>
+
+<div class="modal" id="modal" [class.modal--open]="show">
+  <div class="modal__content">
+    <img [src]="src" alt="" class="modal__img" id="modal__img">
+  </div>
+  <div class="modal__boton" id="modal__boton" (click)="closeModal()">X</div>
+</div>
+
+<main class="main">
+  <div class="group gallery">
+    <h2 class="group__title">Nuestra Galería</h2>
+    <h3 class="group__title">Preparación de Terrenos</h3>
+    <div class="container container--flex">
+      <div class="column column--50-25">
+        <img src='./assets/img/preparado-de-terrenos/01.JPG' alt="una volqueta azul" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/preparado-de-terrenos/02.jpg" alt="Retroexcavadora trabajando" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/preparado-de-terrenos/03.JPG" alt="Retroexcavadora" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/preparado-de-terrenos/04.jpg" alt="terreno preparado para obra" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/preparado-de-terrenos/05.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/preparado-de-terrenos/06.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/preparado-de-terrenos/07.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/preparado-de-terrenos/08.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+    </div>
+    <h3 class="group__title">Apertura de Canal</h3>
+    <div class="container container--flex">
+      <div class="column column--50-25">
+        <img src="./assets/img/apertura-de-canal/01.jpg" alt="Retroexcavadora cavando" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/apertura-de-canal/02.jpg" alt="Retroexcavadora trabajando" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/apertura-de-canal/03.jpg" alt="Retroexcavadora" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/apertura-de-canal/04.jpg" alt="Retroexcavadora en obra" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/apertura-de-canal/05.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/apertura-de-canal/06.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/apertura-de-canal/07.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/apertura-de-canal/08.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+    </div>
+    <h3 class="group__title">Enmallado Perimetral</h3>
+    <div class="container container--flex">
+      <div class="column column--50-25">
+        <img src="./assets/img/zona-urubo/01.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/zona-urubo/02.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/zona-urubo/03.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/zona-urubo/04.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/zona-urubo/05.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/zona-urubo/06.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/zona-urubo/07.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/zona-urubo/08.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+    </div>
+    <h3 class="group__title">Alquiler de Maquinarias</h3>
+    <div class="container container--flex">
+      <div class="column column--50-25">
+        <img src="./assets/img/alquiler-de-maquinaria/01.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/alquiler-de-maquinaria/02.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/alquiler-de-maquinaria/03.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/alquiler-de-maquinaria/04.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/alquiler-de-maquinaria/05.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+        <img src="./assets/img/alquiler-de-maquinaria/06.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+      </div>
+      <div class="column column--50-25">
+        <img src="./assets/img/alquiler-de-maquinaria/07.jpg" alt="" class="gallery__img gallery__img--small" (click)="toogleModal($event)">
+        <img src="./assets/img/alquiler-de-maquinaria/08.jpg" alt="" class="gallery__img gallery__img--big" (click)="toogleModal($event)">
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,75 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<section class="banner">
+  <img src="./assets/img/contacto.jpg" alt="" class="banner__img">
+  <div class="banner__content">Dejanos un mensaje!</div>
+</section>
+
+<main class="main">
+  <section class="group contact">
+    <h2 class="group__title">Contáctenos</h2>
+    <div class="container container--flex">
+      <div class="contact-information column column--50">
+        <h3 class="column__title">Información de contacto</h3>
+        <p class="column__txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo aliquid, sit esse debitis
+          odio voluptate nostrum minima! Sint, non repellendus quae animi, eveniet assumenda, suscipit modi repellat
+          quo ea cumque.</p>
+        <p class="column__txt"><i class="fas fa-phone-volume"></i>Teléfono 1 : 77081684</p>
+        <p class="column__txt"><i class="fas fa-phone-volume"></i>Teléfono 2 : 77387097</p>
+        <p class="column__txt"><i class="fas fa-map-marker-alt"></i>B. 24 de Sep. C/J - Santa Cruz, Bolivia</p>
+        <p class="column__txt"><i class="fas fa-envelope"></i>arana.serviciosintegrales@gmail.com</p>
+        <div class="social-icon">
+          <a href="https://www.facebook.com/aranaASII" target="_blank" class="social-icon__link"><span><i class="fab fa-facebook-f"></i></span></a>
+          <a href="https://api.whatsapp.com/send?phone=+59177081684" target="_blank" class="social-icon__link"><span><i class="fab fa-whatsapp"></i></span></a>
+          <a href="mailto: arana.serviciosintegrales@gmail.com" class="social-icon__link"><span><i class="fas fa-envelope"></i></span></a>
+        </div>
+      </div>
+      <form class="formulario column column--50" [formGroup]="form" (submit)="onEnviar()">
+        <div class="form-group">
+          <label for="nombre" class="formulario__label">Nombre:</label>
+          <input type="text" class="formulario__input-txt" formControlName="nombre" id="nombre" name="nombre">
+          <div *ngIf="form.controls['nombre'].errors && form.controls['nombre'].dirty" class="error">
+            <div *ngIf="form.controls['nombre'].errors.required" class="error">
+              * El Nombre es requerido
+            </div>
+            <div *ngIf="form.controls['nombre'].errors.minlength" class="error">
+              * El Nombre require mínimo 3 letras
+            </div>
+            <div *ngIf="form.controls['nombre'].errors.maxlength" class="error">
+              * El Nombre require un máximo de 15 letras
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="correo" class="formulario__label">Correo:</label>
+          <input type="text" class="formulario__input-txt" formControlName="correo" id="correo" name="correo">
+          <div *ngIf="form.controls['correo'].errors && form.controls['correo'].dirty" class="error">
+            <div *ngIf="form.controls['correo'].errors.required" class="error">
+              * El Campo es requerido
+            </div>
+            <div *ngIf="form.controls['correo'].errors.email" class="error">
+              * Escribe un E-mail valido
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="telefono" class="formulario__label">Teléfono:</label>
+          <input type="tel" class="formulario__input-txt" formControlName="telefono" id="telefono" pattern="[0-9]{7,9}" name="telefono">
+          <div *ngIf="form.controls['telefono'].errors && form.controls['telefono'].dirty" class="error">
+            <div *ngIf="form.controls['telefono'].errors.required" class="error">
+              * El Campo es requerido
+            </div>
+            <div *ngIf="form.controls['telefono'].errors.pattern" class="error">
+              * Pon un teléfono/Celular valido!
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mensaje" class="formulario__label">Mensaje:</label>
+          <textarea formControlName="mensaje" id="mensaje" cols="20" rows="10" class="formulario__textarea" name="mensaje"></textarea>
+        </div>
+        <input [disabled]="!form.valid" class="btn formulario__btn" type="submit" value="Enviar">
+      </form>
+    </div>
+  </section>
+</main>

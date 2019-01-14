@@ -1,0 +1,49 @@
+.main-footer {
+  background-color: #222;
+  color: #FFF;
+  padding: 20px 10px;
+  font-size: .8em;
+}
+
+.copy {
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.design {
+  margin: 0 auto;
+}
+.main-footer [class*="fa-"],
+.main-footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+@media screen and (min-width:480px){
+  .main-footer .container--flex {
+    align-items: flex-start;
+  }
+
+  .column__txt a {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .copy {
+    font-size: 1.2em;
+  }
+
+  .column__txt a {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .main-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

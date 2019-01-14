@@ -1,0 +1,20 @@
+<nav class="main-nav">
+  <div class="container container--flex">
+    <span id="btn-menu" (click)="tooggleMostrar()"><i class="fas fa-bars"></i></span>
+    <ul class="menu" id="menu" [class.show]="show">
+      <li class="menu__item"><a href="#" id ="home" routerLink="/" routerLinkActive="menu__link--select" [routerLinkActiveOptions]="{exact:
+        true}" class="menu__link" (click)="tooggleMostrar()">Inicio</a></li>
+      <li class="menu__item"><a href="#" id="nosotros" routerLink="/nosotros" routerLinkActive="menu__link--select" [routerLinkActiveOptions]="{exact:
+        true}" class="menu__link" (click)="tooggleMostrar()">Nosotros</a></li>
+      <li class="menu__item"><a href="#" id="galeria" routerLink="/galeria" routerLinkActive="menu__link--select" [routerLinkActiveOptions]="{exact:
+        true}" class="menu__link" (click)="tooggleMostrar()">Galería</a></li>
+      <li class="menu__item"><a href="#" id="contactos" routerLink="/contacto" routerLinkActive="menu__link--select" [routerLinkActiveOptions]="{exact:
+        true}" class="menu__link" (click)="tooggleMostrar()">Contacto</a></li>
+    </ul>
+    <div class="social-icon">
+      <a href="https://www.facebook.com/aranaASII" target="_blank" class="social-icon__link"><span><i class="fab fa-facebook-f"></i></span></a>
+      <a href="https://api.whatsapp.com/send?phone=+59177081684" target="_blank" class="social-icon__link"><span><i class="fab fa-whatsapp"></i></span></a>
+      <a href="mailto: arana.serviciosintegrales@gmail.com" class="social-icon__link"><span><i class="fas fa-envelope"></i></span></a>
+    </div>
+  </div>
+</nav>

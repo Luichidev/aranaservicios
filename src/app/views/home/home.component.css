@@ -1,0 +1,50 @@
+/* -------------Estilos principales------------- */
+.today-special .column {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.today-special__img {
+  margin: auto;
+  max-width: 350px;
+}
+
+.today-special__title {
+  font-size: 1.3em;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.today-special__price {
+  font-size: 1.5em;
+  color: var(--mainColor);
+  font-weight: bold;
+}
+
+@media screen and (min-width:480px){
+  .today-special .column {
+    border: 5px solid #DDD;
+    padding: 5px;
+  }
+
+  .today-special__img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .today-special__title {
+    font-size: 1.4em;
+  }
+
+  .today-special__price {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (min-width:1600px) {
+  .today-special__img {
+    height: 300px;
+  }
+}
